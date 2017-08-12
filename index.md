@@ -91,14 +91,17 @@ This script would be deployed on a VMS host and given a url such as `wss://nodev
 
 ```js
 // bobs-party-page.js
+const NodeVMSClient = require('nodevms-client')
 const VMS_URL = 'wss://nodevms.com/bob/my-event-rsvps'
 async function onClickYes () {
-  const backend = new VMSClient(VMS_URL)
-  await backend.RSVP(true)
+  const client = new NodeVMSClient()
+  await client.connect(VMS_URL)
+  await client.RSVP(true)
 }
 async function onClickNo () {
-  const backend = new VMSClient(VMS_URL)
-  await backend.RSVP(false, prompt('Why tho?'))
+  const client = new NodeVMSClient()
+  await client.connect(VMS_URL)
+  await client.RSVP(false, prompt('Why tho?'))
 }
 ```
 
@@ -107,8 +110,9 @@ The current state of the RSVPs could then be read directly by accessing the back
 ```js
 // bobs-party-page.js
 async function getRSVPs () {
-  const backend = new VMSClient(VMS_URL)
-  const fs = backend.files
+  const client = new NodeVMSClient()
+  await client.connect(VMS_URL)
+  const fs = new DatArchive(client.backendInfo.filesArchiveUrl)
   const rsvpFilenames = await fs.readdir('/rsvps')
   let rsvps = []
   for (let i = 0; i < rsvpFilenames.length; i++) {
