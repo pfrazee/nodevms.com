@@ -1,5 +1,6 @@
 ---
 layout: page
+title: A cryptographically auditable VM service
 ---
 
 NodeVMS is a server which provides external auditability of its state and behaviors using [secure ledgers](https://beakerbrowser.com/2017/06/19/cryptographically-secure-change-feeds.html).
