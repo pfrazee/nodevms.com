@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <link href="/assets/css/colors-dark.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+
+  <header id="header">
+    <h1><a href="/">{{ site.title }}</a></h1>
+    <p>{{ site.description }}</p>
+  </header>
+
+
+
+  <div id="page">
+
+
+
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tutorial">Tutorial</a></li>
+          <li><br>Examples</li>
+          <li><a href="/examples/guest-list">guest-list.js</a></li>
+          <li><a href="/examples/keyserver">keyserver.js</a></li>
+          <li><a href="/examples/package-manager">package-manager.js</a></li>
+          <li><br>Links</li>
+          <li><a href="https://github.com/pfrazee/nodevms">Repository</a></li>
+          <li><a href="https://twitter.com/pfrazee">@pfrazee</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+    <div id="content">
+      {{ content }}
+    </div>
+
+
+
+  </div>
+
+
+  <footer id="footer">
+    <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} <a href="https://bluelinklabs.com">Blue Link Labs</a>.</p>
+  </footer>
+
+
+</body>
+</html>

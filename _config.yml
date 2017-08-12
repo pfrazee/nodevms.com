@@ -1,0 +1,18 @@
+title: NodeVMS
+description: > 
+  A cryptographically auditable VM service using Nodejs and <a href="https://github.com/datproject/dat">Dat</a>.
+
+  <pre class="highlight"><code>npm install -g nodevms</code></pre>
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://nodevms.com/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: pfrazee
+github_username:  pfrazee
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
