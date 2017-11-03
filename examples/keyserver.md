@@ -55,7 +55,7 @@ exports.setAdmins = async (newAdmins) => {
 // helper to fetch the current admins
 async function getAdmins () {
   try { return JSON.parse(await fs.readFile('/admins')) }
-  catch (e) { console.error('nope', e); return [] }
+  catch (e) { return [] }
 }
 
 // helper to validate the admins array
