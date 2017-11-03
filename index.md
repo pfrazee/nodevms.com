@@ -1,9 +1,9 @@
 ---
 layout: page
-title: A smart contract server built on NodeJS and Dat
+title: A smart contract server built with Dat
 ---
 
-NodeVMS is a smart-contract server which provides external auditability of its state and behaviors using [secure ledgers](https://beakerbrowser.com/2017/06/19/cryptographically-secure-change-feeds.html).
+NodeVMS is a smart-contract server which provides external auditability of its state and behaviors using Dat's [secure ledgers](https://beakerbrowser.com/2017/06/19/cryptographically-secure-change-feeds.html).
 
 ```js
 // contract.js (a simple guest list example)
@@ -37,8 +37,6 @@ $ nodevms repl localhost:5555 \
 # Audit the state and history of a service
 $ nodevms verify localhost:5555
 ```
-
-**Proof of Concept**. Not ready for use in production.
 
 <br>
 
