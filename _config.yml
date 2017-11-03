@@ -1,6 +1,6 @@
 title: NodeVMS
 description: > 
-  A cryptographically auditable VM service using Nodejs and <a href="https://github.com/datproject/dat">Dat</a>.
+  A smart contract server built on Nodejs and <a href="https://github.com/datproject/dat">Dat</a>. (Proof-of-concept.)
 
   <pre class="highlight"><code>npm install -g nodevms</code></pre>
 baseurl: "" # the subpath of your site, e.g. /blog
