@@ -28,7 +28,7 @@ The core of NodeVMS is a code-contract which has its execution verified by third
 
 As the service runs, the monitoring computers watch the ledger to make sure any state-change matches the contract and the remote requests. If the service deviates from the code-contract, the deviation will be detected by the monitors. (This is a similar design to [Certificate Tranparency](https://www.certificate-transparency.org/).)
 
-NodeVMS is a proof-of-concept. It is comparable to decentralized smart-contract platforms such as Ethereum. The key difference is that NodeVMS uses only one hosting server and any number of auditors. This makes NodeVMS much more efficient and cheap to run, as no consensus system (such as Proof of Work) is required. However, it does not decentralize operation of the contract.
+NodeVMS is a proof-of-concept. It is comparable to decentralized smart-contract platforms such as Ethereum. The key difference is that NodeVMS uses only one hosting server. This makes NodeVMS much cheaper to run, as no Proof of Work is required. However, it does not decentralize operation of the contract.
 
 NodeVMS would be useful for running name servers, encrypted key distribution, or any other kind of database that requires a high degree of outside auditability.
 
