@@ -24,9 +24,11 @@ $ nodevms verify localhost:5555
 
 VMS uses [Dat's](https://github.com/datproject/dat) secure ledger and files distribution to publish transactions and service state in a public, unforgeable format. Clients can then download, replay, audit, and compare the state of the service to ensure the declared code is being executed correctly.
 
-The core of NodeVMS security is providing a code-contract which can have its execution verified. On creation, the code-contract is set permanently in the log. Thereafter, all activity and state is written to the append-only log (the "secure ledger") which can be monitored from any other computer. As the service runs, the monitoring computers will replay its actions to make sure the state-changes match that of the contract. If the service running the code-contract tries to deviate from the code-contract, this deviation will be detectable.
+The core of NodeVMS is a code-contract which has its execution verified by third parties. On creation, the contract is set permanently in the log (the "secure ledger"). Thereafter, all activity and state is written to the ledger, and can be monitored from any other computer.
 
-NodeVMS is a proof-of-concept. It is comparable to decentralized smart-contract platforms such as Ethereum. The key difference is that NodeVMS uses only one hosting server, and any number of auditors. This makes NodeVMS much more efficient and cheap to run, as no consensus system (such as Proof of Work) is required. However, it does not decentralize operation of the contract.
+As the service runs, the monitoring computers watch the ledger to make sure any state-change matches the contract and the remote requests. If the service deviates from the code-contract, the deviation will be detected by the monitors. (This is a similar design to [Certificate Tranparency](https://www.certificate-transparency.org/).)
+
+NodeVMS is a proof-of-concept. It is comparable to decentralized smart-contract platforms such as Ethereum. The key difference is that NodeVMS uses only one hosting server and any number of auditors. This makes NodeVMS much more efficient and cheap to run, as no consensus system (such as Proof of Work) is required. However, it does not decentralize operation of the contract.
 
 NodeVMS would be useful for running name servers, encrypted key distribution, or any other kind of database that requires a high degree of outside auditability.
 
